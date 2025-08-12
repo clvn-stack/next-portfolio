@@ -8,6 +8,9 @@ const Header = () => {
   const [message, setMessage] = useState("");
   const [isEmailValid, setIsEmailValid] = useState(true);
 
+  const basePath =
+    process.env.NODE_ENV === "production" ? "/next-portfolio" : "";
+
   const openModal = () => {
     setIsModalOpen(true);
     document.body.style.overflow = "hidden";
@@ -36,7 +39,7 @@ const Header = () => {
             <div className="flex gap-4">
               <div className="avatar">
                 <div className="w-12 rounded-full">
-                  <img src="./images/cb.jpg" />
+                  <img src={`${basePath}/images/cb.jpg`} />
                 </div>
               </div>
               <div className="flex items-center justify-center">

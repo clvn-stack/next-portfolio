@@ -29,6 +29,8 @@ const Carousel = ({
   interval = 5000,
   handleServices,
 }: CarouselProps) => {
+  const basePath =
+    process.env.NODE_ENV === "production" ? "/next-portfolio" : "";
   const isHoveredRef = useRef(false);
   const [selectedService, setSelectedService] = useState<Services | null>(null);
 
@@ -102,7 +104,7 @@ const Carousel = ({
       onClick={() => handleClick(service)}
     >
       <div className="p-2 rounded-full bg-white/10">
-        <img src={`./images/${service.icon}.svg`} className="w-12" />
+        <img src={`${basePath}/images/${service.icon}.svg`} className="w-12" />
       </div>
       <div className="text-lg mt-2">{service.title}</div>
       <div className="text-sm font-normal text-center text-purple-300">

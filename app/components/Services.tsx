@@ -17,7 +17,7 @@ const Services = () => {
 
   return (
     <div className="">
-      <div className="grid grid-cols-1 md:grid-cols-12  px-4 md:px-0 ">
+      <div className="grid grid-cols-1 md:grid-cols-12 pt-10 md:pt-2 px-4 md:px-0 ">
         <div className="col-span-1 md:col-span-3 flex flex-col justify-center">
           <div className="text-lg font-bold pb-2 text-purple-400">
             What I can do?

@@ -16,7 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="overflow-x-hidden">
-      <base href="/next-portfolio/" />
+      <head>
+        <base href="/next-portfolio/" />
+      </head>
+
       <body className="antialiased overflow-x-hidden max-w-[100vw]">
         <div className="w-full bg-gradient-to-r from-gray-900 via-purple-900 to-indigo-900 min-h-[100dvh] overflow-x-hidden">
           <div className="max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8">

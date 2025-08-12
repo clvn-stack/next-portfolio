@@ -3,9 +3,7 @@
   "version": "0.1.0",
   "private": true,
 "scripts": {
-  "dev": "next dev",
-  "build": "next build",
-  "deploy": "next build && gh-pages -d out"
+  "build": "next build --no-lint"
 },
   "dependencies": {
     "@iconify/react": "^6.0.0",

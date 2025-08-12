@@ -1,0 +1,164 @@
+[
+    {
+      "id": 1,
+      "title": "Web Design",
+      "description": "Clean, user-friendly, responsive and focused on great user experience.",
+      "icon": "line",
+      "projects": [
+        {
+          "name": "Calvin's Portfolio",
+          "link": "https://calvinbaltazar.com",
+          "type": "portfolio"
+        },
+        {
+          "name": "Driptee Clothing",
+          "link": "https://driptee.shop",
+          "type": "ecommerce"
+        },
+        {
+          "name": "Smooth Studio Landing",
+          "link": "https://smoothstudio.xyz",
+          "type": "landing"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Development",
+      "description": "Building responsive, interactive user interfaces using modern web technologies.",
+      "icon": "code",
+      "projects": [
+        {
+          "name": "Calvin's Portfolio",
+          "link": "https://calvinbaltazar.com",
+          "type": "portfolio"
+        },
+        {
+          "name": "Driptee Clothing",
+          "link": "https://driptee.shop",
+          "type": "ecommerce"
+        },
+        {
+          "name": "Smooth Studio Landing",
+          "link": "https://smoothstudio.xyz",
+          "type": "landing"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "SEO",
+      "description": "Improving visibility to rank higher on search engines and attract more traffic.",
+      "icon": "searchCode",
+      "projects": [
+        {
+          "name": "Calvin's Portfolio",
+          "link": "https://calvinbaltazar.com",
+          "type": "portfolio"
+        },
+        {
+          "name": "Driptee Clothing",
+          "link": "https://driptee.shop",
+          "type": "ecommerce"
+        },
+        {
+          "name": "Smooth Studio Landing",
+          "link": "https://smoothstudio.xyz",
+          "type": "landing"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Branding",
+      "description": "Designing unique and memorable logos that reflect your brand identity.",
+      "icon": "pen",
+      "projects": [
+        {
+          "name": "Calvin's Portfolio",
+          "link": "https://calvinbaltazar.com",
+          "type": "portfolio"
+        },
+        {
+          "name": "Driptee Clothing",
+          "link": "https://driptee.shop",
+          "type": "ecommerce"
+        },
+        {
+          "name": "Smooth Studio Landing",
+          "link": "https://smoothstudio.xyz",
+          "type": "landing"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "EDM Creation",
+      "description": "Crafting responsive email templates that work across all devices.",
+      "icon": "edm",
+      "projects": [
+        {
+          "name": "Calvin's Portfolio",
+          "link": "https://calvinbaltazar.com",
+          "type": "portfolio"
+        },
+        {
+          "name": "Driptee Clothing",
+          "link": "https://driptee.shop",
+          "type": "ecommerce"
+        },
+        {
+          "name": "Smooth Studio Landing",
+          "link": "https://smoothstudio.xyz",
+          "type": "landing"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "GWB",
+      "description": "Creating banner ads optimized for Google Display Network campaigns.",
+      "icon": "webads",
+      "projects": [
+        {
+          "name": "Calvin's Portfolio",
+          "link": "https://calvinbaltazar.com",
+          "type": "portfolio"
+        },
+        {
+          "name": "Driptee Clothing",
+          "link": "https://driptee.shop",
+          "type": "ecommerce"
+        },
+        {
+          "name": "Smooth Studio Landing",
+          "link": "https://smoothstudio.xyz",
+          "type": "landing"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "SocMed Ads",
+      "description": "Designing impactful visuals tailored for high engagement across social platforms.",
+      "icon": "ads",
+      "projects": [
+        {
+          "name": "Calvin's Portfolio",
+          "link": "https://calvinbaltazar.com",
+          "type": "portfolio"
+        },
+        {
+          "name": "Driptee Clothing",
+          "link": "https://driptee.shop",
+          "type": "ecommerce"
+        },
+        {
+          "name": "Smooth Studio Landing",
+          "link": "https://smoothstudio.xyz",
+          "type": "landing"
+        }
+      ]
+    }
+  ]
+  

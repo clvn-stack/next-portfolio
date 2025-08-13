@@ -12,7 +12,7 @@ const Record = () => {
       title: "Senior Front-End Developer",
       date: "Sept 2021 - March 2025",
       items: [
-        "Creating Microsite/Landing pages (HTML, JS, CSS, Bootstrap)",
+        "Creating Landing pages (HTML, JS, CSS, Bootstrap, ReactJS)",
         "Creating and maintaining configurator for Chevrolet, Cadillac and GMC",
         "Creating Emailers (EDMS)",
       ],
@@ -30,7 +30,7 @@ const Record = () => {
     },
     {
       name: "tab3",
-      label: "One Contact Center",
+      label: "OCC",
       title: "Web Designer / Web Developer",
       date: "APR 2016 - MAR 2018",
       items: [

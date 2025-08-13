@@ -72,7 +72,7 @@ const Hero = () => {
             </span>
           </div>
 
-          <div className="flex flex-col lg:flex-row-reverse gap-6 lg:pt-12 px-4 sm:px-0">
+          <div className="flex flex-col-reverse lg:flex-row-reverse gap-6 lg:pt-12 px-4 sm:px-0">
             <div className="flex-1 bg-black/10 rounded-2xl transition-all duration-300 ease-in-out">
               <div className="p-4 flex">
                 <IconCarousel

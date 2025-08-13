@@ -150,10 +150,16 @@ const Carousel = ({
               <ul className="list bg-black/50 rounded-box shadow-md">
                 {selectedService?.projects?.map((project, index) => (
                   <li key={index} className="list-row">
-                    <div className="list-col-grow cursor-pointer">
-                      <div>{project.name}</div>
-                      <div className="text-xs uppercase font-semibold opacity-60">
-                        {project.type}
+                    <div className="list-col-grow cursor-pointer space-y-2">
+                      <div className="text-xs font-semibold">
+                        Link :{" "}
+                        <a
+                          className="hover:text-green-300"
+                          href={project.link}
+                          target="_blank"
+                        >
+                          {project.link}
+                        </a>
                       </div>
                     </div>
                   </li>

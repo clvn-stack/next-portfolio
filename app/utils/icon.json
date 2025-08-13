@@ -3,84 +3,84 @@
       "id": 1,
       "name": "HTML",
       "icon": "vscode-icons:file-type-html",
-      "rating": 80,
-      "yof": 90
+      "rating": 90,
+      "yof": 9
     },
     {
       "id": 2,
       "name": "CSS",
       "icon": "vscode-icons:file-type-css",
-      "rating": 70,
-      "yof": 90
+      "rating": 80,
+      "yof": 9
     },
     {
       "id": 3,
       "name": "Javascript",
       "icon": "logos:javascript",
       "rating": 80,
-      "yof": 70
+      "yof": 7
     },
     {
       "id": 4,
       "name": "React JS",
       "icon": "logos:react",
       "rating": 60,
-      "yof": 20
+      "yof": 2
     },
     {
       "id": 5,
       "name": "NEXT JS",
       "icon": "logos:nextjs-icon",
       "rating": 50,
-      "yof": 20
+      "yof": 2
     },
     {
       "id": 6,
       "name": "Tailwind",
       "icon": "logos:tailwindcss-icon",
       "rating": 80,
-      "yof": 20
+      "yof": 2
     },
     {
       "id": 7,
       "name": "NODEJS",
       "icon": "logos:nodejs-icon",
       "rating": 50,
-      "yof": 20
+      "yof": 2
     },
     {
       "id": 8,
       "name": "Typescript",
       "icon": "logos:typescript-icon",
       "rating": 60,
-      "yof": 20
+      "yof": 2
     },
     {
       "id": 9,
       "name": "Bootstrap",
       "icon": "logos:bootstrap",
       "rating": 90,
-      "yof": 60
+      "yof": 6
     },
     {
       "id": 10,
       "name": "Github",
       "icon": "mdi:github",
       "rating": 60,
-      "yof": 20
+      "yof": 2
     },
     {
       "id": 11,
       "name": "Photoshop",
       "icon": "logos:adobe-photoshop",
       "rating": 80,
-      "yof": 90
+      "yof": 9
     },
     {
       "id": 12,
       "name": "Adobe Premiere",
       "icon": "logos:adobe-premiere",
       "rating": 60,
-      "yof": 20
+      "yof": 2
     }
   ]

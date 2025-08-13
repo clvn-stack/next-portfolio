@@ -1,15 +1,13 @@
 "use client";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 
 const Header = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [isEmailValid, setIsEmailValid] = useState(true);
-
-  const basePath =
-    process.env.NODE_ENV === "production" ? "/next-portfolio" : "";
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -39,7 +37,12 @@ const Header = () => {
             <div className="flex gap-4">
               <div className="avatar">
                 <div className="w-12 rounded-full">
-                  <img src={`${basePath}/images/cb.jpg`} />
+                  <Image
+                    src={`/images/cb.jpg`}
+                    alt={`Avatar`}
+                    width={62}
+                    height={62}
+                  />
                 </div>
               </div>
               <div className="flex items-center justify-center">
@@ -81,8 +84,8 @@ const Header = () => {
             >
               <h2 className="text-xl font-bold mb-4">Reach Out</h2>
               <p className="text-sm opacity-70 mb-6">
-                Feel free to reach out and we'll get back to you as soon as we
-                can.
+                Feel free to reach out and we&apos;ll get back to you as soon as
+                we can.
               </p>
 
               <fieldset className="fieldset w-full">
@@ -92,6 +95,7 @@ const Header = () => {
                       isEmailValid ? "border-white/10" : "border-red-500"
                     }`}
                     type="email"
+                    required
                     placeholder="your email here..."
                     value={email}
                     onChange={(e) => {
@@ -112,6 +116,7 @@ const Header = () => {
                   className="textarea textarea-ghost border-white/10 w-full bg-black/0 focus:bg-transparent focus:ring-0 mt-3"
                   placeholder="Feel free to reach out"
                   value={message}
+                  required
                   onChange={(e) => setMessage(e.target.value)}
                 ></textarea>
 

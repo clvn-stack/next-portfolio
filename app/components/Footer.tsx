@@ -5,15 +5,15 @@ const Footer = () => {
   const icons = [
     {
       name: "simple-icons:facebook",
-      url: "https://www.facebook.com/yourpage",
+      url: "https://www.facebook.com/calvin.baltazar",
     },
     {
       name: "simple-icons:instagram",
-      url: "https://www.instagram.com/yourprofile",
+      url: "https://www.instagram.com/clvn.bltzr/",
     },
     {
       name: "simple-icons:linkedin",
-      url: "https://www.linkedin.com/in/yourprofile",
+      url: "https://www.linkedin.com/in/clvnbltzr",
     },
     {
       name: "tabler:mail",

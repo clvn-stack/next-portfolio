@@ -4,6 +4,7 @@ import CountUp from "react-countup";
 import { useState, useEffect } from "react";
 import icons from "../utils/icon.json";
 import IconCarousel from "./IconCarousel";
+import { Icon } from "@iconify/react";
 
 const Hero = () => {
   const fullText = "Calvin Baltazar";
@@ -31,15 +32,13 @@ const Hero = () => {
     const targetRating = icons?.[currentIconIndex]?.rating || 0;
     const targetYeo = icons?.[currentIconIndex]?.yof || 0;
 
-    const stepRating = targetRating > animatedRating ? 1 : -1;
-    const stepYeo = targetYeo > animatedYeo ? 1 : -1;
-
     const interval = setInterval(() => {
       setAnimatedRating((prev) => {
-        const next = prev + stepRating;
+        const step = targetRating > prev ? 1 : -1;
+        const next = prev + step;
         if (
-          (stepRating > 0 && next >= targetRating) ||
-          (stepRating < 0 && next <= targetRating)
+          (step > 0 && next >= targetRating) ||
+          (step < 0 && next <= targetRating)
         ) {
           return targetRating;
         }
@@ -47,10 +46,11 @@ const Hero = () => {
       });
 
       setAnimatedYeo((prev) => {
-        const next = prev + stepYeo;
+        const step = targetYeo > prev ? 1 : -1;
+        const next = prev + step;
         if (
-          (stepYeo > 0 && next >= targetYeo) ||
-          (stepYeo < 0 && next <= targetYeo)
+          (step > 0 && next >= targetYeo) ||
+          (step < 0 && next <= targetYeo)
         ) {
           return targetYeo;
         }
@@ -59,7 +59,7 @@ const Hero = () => {
     }, 10);
 
     return () => clearInterval(interval);
-  }, [currentIconIndex, icons]);
+  }, [currentIconIndex]);
 
   return (
     <div>
@@ -72,9 +72,9 @@ const Hero = () => {
             </span>
           </div>
 
-          <div className="flex flex-col lg:flex-row gap-6 lg:pt-12 px-4 sm:px-0">
-            <div className="flex-1  bg-black/10 rounded-2xl transition-all duration-300 ease-in-out">
-              <div className="p-4">
+          <div className="flex flex-col lg:flex-row-reverse gap-6 lg:pt-12 px-4 sm:px-0">
+            <div className="flex-1 bg-black/10 rounded-2xl transition-all duration-300 ease-in-out">
+              <div className="p-4 flex">
                 <IconCarousel
                   iconsVal={icons}
                   onIndexChange={handleIndexChange}
@@ -83,9 +83,15 @@ const Hero = () => {
             </div>
 
             <div className="flex-1 p-4 rounded-2xl bg-black/10 transition-all duration-300 ease-in-out">
-              <div className="flex p-2 gap-6">
+              <div className="flex p-2 gap-4 justify-center items-center">
+                <div>
+                  <Icon
+                    icon={icons?.[currentIconIndex]?.icon || "mdi:alert-circle"}
+                    className="w-16 h-16"
+                  />
+                </div>
                 <div className="flex flex-col justify-center w-full transition-all duration-300 ease-in-out">
-                  <div className="text-md font-bold">
+                  <div className="text-lg font-bold text-white">
                     {icons?.[currentIconIndex]?.name || "Loading..."}
                   </div>
                   <div className="flex flex-col">
@@ -98,6 +104,9 @@ const Hero = () => {
                         value={animatedRating}
                         max="100"
                       ></progress>
+                      <label className="block text-xs text-green-300 font-bold">
+                        Skill Rating : {icons?.[currentIconIndex]?.rating} / 100{" "}
+                      </label>
                     </div>
                   </div>
 
@@ -108,8 +117,11 @@ const Hero = () => {
                     <progress
                       className="progress progress-success w-full"
                       value={animatedYeo}
-                      max="100"
+                      max="10"
                     ></progress>
+                    <label className="block text-xs text-green-300 font-bold">
+                      Years of Exp : {icons?.[currentIconIndex]?.yof} / 10 years
+                    </label>
                   </div>
                 </div>
               </div>

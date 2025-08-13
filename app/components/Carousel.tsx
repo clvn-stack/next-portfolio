@@ -2,12 +2,14 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 type Services = {
   id: number;
   title: string;
   description: string;
   icon: string;
+  modalD?: string;
   projects?: Projects[];
 };
 type Projects = {
@@ -29,8 +31,6 @@ const Carousel = ({
   interval = 5000,
   handleServices,
 }: CarouselProps) => {
-  const basePath =
-    process.env.NODE_ENV === "production" ? "/next-portfolio" : "";
   const isHoveredRef = useRef(false);
   const [selectedService, setSelectedService] = useState<Services | null>(null);
 
@@ -94,21 +94,27 @@ const Carousel = ({
   };
 
   const cardClass =
-    "w-full sm:w-[60%] md:w-[60%] lg:w-[280px] h-60 bg-black/20 px-8 rounded-xl flex-shrink-0 snap-start flex flex-col items-center justify-center font-bold text-xl transition-all duration-300 ease-in-out hover:bg-white/10 cursor-pointer";
+    "w-full sm:w-[60%] md:w-[60%] lg:w-[280px] h-80 bg-black/20 rounded-xl flex-shrink-0 snap-start flex flex-col items-center justify-start font-bold text-xl transition-all duration-300 ease-in-out hover:bg-white/10 cursor-pointer";
 
   const items = [...handleServices, ...handleServices].map((service, i) => (
     <div
       id={`item-${i}`}
       key={`item-${i}`}
-      className={cardClass}
+      className={`${cardClass}`}
       onClick={() => handleClick(service)}
     >
-      <div className="p-2 rounded-full bg-white/10">
-        <img src={`${basePath}/images/${service.icon}.svg`} className="w-12" />
-      </div>
-      <div className="text-lg mt-2">{service.title}</div>
-      <div className="text-sm font-normal text-center text-purple-300">
-        {service.description}
+      <Image
+        className="rounded-t-2xl w-full"
+        src="/images/fur.jpg"
+        alt={`${service.icon}`}
+        width="200"
+        height={100}
+      />
+      <div className="flex flex-col h-full justify-start items-center p-4">
+        <div className="text-lg pb-2 capitalize">{service.title}</div>
+        <div className="text-sm font-normal text-purple-300 h-fit text-center">
+          {service.description}
+        </div>
       </div>
     </div>
   ));
@@ -137,34 +143,19 @@ const Carousel = ({
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.2 }}
             >
-              <h3 className="text-xl font-bold">{selectedService.title}</h3>
-              <p className="py-4 text-purple-300">
-                {selectedService.description}
-              </p>
-              <ul className="list bg-black/0 rounded-box shadow-md">
-                <li className="p-4 pb-2 text-sm font-bold opacity-60 tracking-wide">
-                  Sample Projects
-                </li>
+              <h3 className="text-xl font-bold capitalize">
+                {selectedService.title}
+              </h3>
+              <p className="py-4 text-purple-300">{selectedService.modalD}</p>
+              <ul className="list bg-black/50 rounded-box shadow-md">
                 {selectedService?.projects?.map((project, index) => (
                   <li key={index} className="list-row">
-                    <div className="text-4xl font-thin opacity-30 tabular-nums">
-                      0{index + 1}
-                    </div>
-                    <div>
-                      <img
-                        className="size-10 rounded-box"
-                        src="https://img.daisyui.com/images/profile/demo/1@94.webp"
-                      />
-                    </div>
-                    <div className="list-col-grow">
+                    <div className="list-col-grow cursor-pointer">
                       <div>{project.name}</div>
                       <div className="text-xs uppercase font-semibold opacity-60">
                         {project.type}
                       </div>
                     </div>
-                    <button className="btn btn-square btn-ghost w-16 px-2">
-                      Visit
-                    </button>
                   </li>
                 ))}
               </ul>

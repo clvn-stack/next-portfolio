@@ -15,7 +15,6 @@ const Record = () => {
         "Creating Microsite/Landing pages (HTML, JS, CSS, Bootstrap)",
         "Creating and maintaining configurator for Chevrolet, Cadillac and GMC",
         "Creating Emailers (EDMS)",
-        "Creating Google Website Banners",
       ],
     },
     {
@@ -42,7 +41,7 @@ const Record = () => {
     },
   ];
   return (
-    <div className="py-8 pb-30 px-4 md:px-0">
+    <div className=" py-4 px-4 md:px-0">
       <div className="flex flex-col lg:flex-row gap-6">
         <div className="flex-1">
           <div className="tabs tabs-border bg-black/20 rounded-2xl p-2">
@@ -85,10 +84,10 @@ const Record = () => {
                 <Handshake className="w-12 h-12 text-white" />
               </span>
               <span className="font-bold text-xl text-center text-purple-400">
-                Let’s Work Together
+                Let&apos;s Work Together
               </span>
               <div className="desc text-sm text-center">
-                I’m open to freelance or full-time frontend roles.
+                I&apos;m open to freelance or full-time frontend roles.
               </div>
             </a>
             <a
@@ -103,7 +102,7 @@ const Record = () => {
                 Have a Project?
               </span>
               <div className="desc text-sm text-center">
-                Let’s bring your idea to life — contact me.
+                Let&apos;s bring your idea to life — contact me.
               </div>
             </a>
             <a
